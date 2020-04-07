@@ -17,5 +17,7 @@ docker run -p 5000:5000 -d github-actions-testbed:${tagged_name}
 ```
 Navigate to [localhost:5000](http://localhost:5000) for running the demo.
 
-# Action One: Docker Build
-On every push to master
+# Action One: Docker Build and Publish
+On every push to master and a new release, there should be a docker build and push to the docker hub.
+This is done using [this file](.github/workflows/docker-build.yml)
+
