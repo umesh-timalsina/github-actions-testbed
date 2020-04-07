@@ -22,6 +22,7 @@ jobs:
           echo "::set-env name=RELEASE_TAG_NAME::$(echo ${GITHUB_REF:10})"
           echo "::set-env name=DEFAULT_TAG_NAME::stable"
           echo "::set-env name=TAG_SEMVER::true"
+          echo "::set-env name=VERSION::12"
         if: github.event_name == 'release'
 
       - name: Get Push Tags
