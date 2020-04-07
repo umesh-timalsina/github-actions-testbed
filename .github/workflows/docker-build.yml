@@ -39,4 +39,4 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
           tag_semver: github.event_name == 'release'
           tags: "${{ env.DEFAULT_TAG_NAME }},${{ env.RELEASE_TAG_NAME }}"
-          buildargs: "${{ env.VERSION }}"
+          buildargs: "VERSION=${{ env.VERSION }}"
