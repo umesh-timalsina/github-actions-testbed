@@ -40,6 +40,6 @@ jobs:
           name: tumesh/github-actions-testbed
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-          tag_semver: ${{ env.TAG_SEMVER }}
+          tag_semver: true
           tags: "${{ env.DEFAULT_TAG_NAME }},${{ env.RELEASE_TAG_NAME }}"
           buildargs: "VERSION=${{ env.VERSION }}"
