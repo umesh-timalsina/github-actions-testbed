@@ -20,8 +20,8 @@ jobs:
 
       - name: Get tag name
         id: get_latest
-        run: echo "::set-env name=DEFAULT_TAG_NAME::stable"
-        if: github.event_name == 'push'
+        run: echo "::set-env name=DEFAULT_TAG_NAME::latest"
+        if: github.event_name == 'release'
 
       - name: Print tags
         run: echo ${DEFAULT_TAG_NAME} ${RELEASE_VERSION}
