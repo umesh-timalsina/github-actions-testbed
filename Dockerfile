@@ -1,4 +1,5 @@
-FROM node:12
+ARG VERSION
+FROM node:$VERSION
 
 SHELL ["/bin/bash", "-c"]
 
