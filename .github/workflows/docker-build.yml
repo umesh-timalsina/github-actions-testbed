@@ -16,15 +16,11 @@ jobs:
       - name: Get release version
         id: get_version
         run: echo ::set-env name=RELEASE_VERSION::$(echo ${GITHUB_REF:10})
-      - name: Dump Github Context
-        env:
-          - GITHUB_CONTEXT: ${{ toJson(github) }}
-        run: echo "$GITHUB_CONTEXT"
 
       - name: Get tag name
         id: get_latest
         run: echo "::set-env name=DEFAULT_TAG_NAME::stable"
-        if: ${{ github.event == 'push'}}
+        if: github.event_name == 'push'
 
       - name: Print tags
         run: echo ${DEFAULT_TAG_NAME} ${RELEASE_VERSION}
