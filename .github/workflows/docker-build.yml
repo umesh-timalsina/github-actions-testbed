@@ -34,7 +34,7 @@ jobs:
         if: github.event_name == 'push'
 
       - name: Publish to Docker Hub
-        uses: elgohr/Publish-Docker-Github-Action@master
+        uses: elgohr/Publish-Docker-Github-Action@v5
         with:
           name: tumesh/github-actions-testbed
           username: ${{ secrets.DOCKER_USERNAME }}
